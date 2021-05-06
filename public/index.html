@@ -13,114 +13,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="root">
-      <div class="pagina">
-        <div class="topo">
-          <div class="logo">FoodCamp<p>Sua comida em 6 minutos</p>
-          </div>
-        </div>
-        <div class="corpo">
-          <div class="nome-tipo">Primeiro, seu prato</div>
-          <div class="tipo primeira">
-            <div class="prato um" onclick="selecionarprato('prato', 'um')">
-              <img src="imagens/frango_yin_yang 1.png" alt="Prato com frango" />
-              <div class="titulo">Frango Yin Yang</div>
-              <div class="subtitulo"> Um pouco de batata, </br>um pouco de salada </div>
-              <div class="preco">R$ 19,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="prato dois" onclick="selecionarprato('prato', 'dois')">
-              <img src="imagens/camarao.png" alt="prato com camarao" />
-              <div class="titulo">Camarão</div>
-              <div class="subtitulo">Acompanha molho especial </div>
-              <div class="preco">R$ 35,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-    
-            <div class="prato tres" onclick="selecionarprato('prato', 'tres')">
-              <img src="imagens/lasanha.jpg" alt="prato com lasanha" />
-              <div class="titulo">Lasanha</div>
-              <div class="subtitulo">Bolonhesa</div>
-              <div class="preco">R$ 20,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="prato quatro" onclick="selecionarprato('prato', 'quatro')">
-              <img src="imagens/hamburguer.jpg" alt="prato com hambúrguer" />
-              <div class="titulo">Hambúrguer</div>
-              <div class="subtitulo"> Com fritas </br> </div>
-              <div class="preco">R$ 25,90<ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-          </div>
-          <div class="nome-tipo">Agora, sua bebida</div>
-          <div class="tipo segunda">
-            <div class="bebida um" onclick="selecionarbebida('bebida', 'um')">
-              <img src="imagens/coquinha_gelada 1.png" alt="refrigerante de cola" />
-              <div class="titulo">Coquinha</div>
-              <div class="subtitulo">Lata 350ml</div>
-              <div class="preco">R$ 4,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="bebida dois" onclick="selecionarbebida('bebida', 'dois')">
-              <img src="imagens/limonada.jpg" alt="limonada" />
-              <div class="titulo">Limonada</div>
-              <div class="subtitulo">Copo 350ml</div>
-              <div class="preco">R$ 7,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-    
-            <div class="bebida tres" onclick="selecionarbebida('bebida', 'tres')">
-              <img src="imagens/suco.jpg" alt="suco" />
-              <div class="titulo">Suco</div>
-              <div class="subtitulo">Copo 250ml</div>
-              <div class="preco">R$ 6,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="bebida quatro" onclick="selecionarbebida('bebida', 'quatro')">
-              <img src="imagens/heineken.jpg" alt="cerveja" />
-              <div class="titulo">Heineken</div>
-              <div class="subtitulo">Long neck 350ml</div>
-              <div class="preco">R$ 12,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-          </div>
-          <div class="nome-tipo">Por fim, sua sobremesa</div>
-          <div class="tipo terceira">
-            <div class="sobremesa um" onclick="selecionarsobremesa('sobremesa', 'um')">
-              <img src="imagens/brownie.jpg" alt="brownie" />
-              <div class="titulo">Brownie</div>
-              <div class="subtitulo">Com cobertura</div>
-              <div class="preco">R$ 7,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="sobremesa dois" onclick="selecionarsobremesa('sobremesa', 'dois')">
-              <img src="imagens/pudim 1.png" alt="pudim" />
-              <div class="titulo">Pudim</div>
-              <div class="subtitulo">Apenas pudim</div>
-              <div class="preco">R$ 8,90 <ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="sobremesa tres" onclick="selecionarsobremesa('sobremesa', 'tres')">
-              <img src="imagens/sorvete.jpg" alt="sorvete" />
-              <div class="titulo">Sorvete</div>
-              <div class="subtitulo">Sabor: nozes</div>
-              <div class="preco">R$ 9,90<ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-            <div class="sobremesa quatro" onclick="selecionarsobremesa('sobremesa', 'quatro')">
-              <img src="imagens/cenoura.jpg" alt="bolo de cenoura" />
-              <div class="titulo">Bolo de cenoura</div>
-              <div class="subtitulo">com cobertura de chocolate</div>
-              <div class="preco">R$ 9,90<ion-icon name="checkmark-circle"></ion-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fechamento">
-          <a>Selecione os 3 itens </br> para fechar o pedido</a> </div>
-        <div class="verde escondido" onclick="botaoverde()">
-          <a>Fechar pedido</a>
-        </div>
-      </div>
+      
       <div class="mascara escondido">
         <div class="caixa-confirmacao">
           <p class="bold"> Confirme seu pedido</p>
@@ -137,7 +30,6 @@
           </div>
           <button class="cancelar" onclick="cancelar()">Cancelar</button>
         </div>
-      </div>
       </div>
      </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script></div>
