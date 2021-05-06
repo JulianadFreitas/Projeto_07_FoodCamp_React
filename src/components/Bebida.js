@@ -1,4 +1,5 @@
 import CadaBebida from "./CadaBebida";
+
 export default function Bebida() {
     const bebidas = [
     {num:"um", src:"imagens/coquinha_gelada 1.png", alt:"refrigerante de cola", titulo:"Coquinha", subtitulo:"Lata 350ml", preco:"R$ 4,90" }, 
@@ -9,14 +10,13 @@ export default function Bebida() {
     return ( <>
         <div class="nome-tipo">Agora, sua bebida</div>
         <div class="tipo primeira">
-        { bebidas.map( itens => {
+        { bebidas.map( item => {
             return (
-                <div class="prato um" onclick="selecionarprato('prato', 'um')">
-                   <CadaBebida src={itens.src} alt = {itens.alt} titulo ={itens.titulo} subtitulo={itens.subtitulo} preco={itens.preco} /> 
-                </div>
+                <CadaBebida src={item.src} alt = {item.alt} titulo ={item.titulo} subtitulo={item.subtitulo} preco={item.preco} />
             );
         })}
   </div></> 
-   )
+   );
+ 
 }
 

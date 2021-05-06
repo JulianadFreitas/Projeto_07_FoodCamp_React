@@ -154,14 +154,28 @@
     box-shadow: inset 0px 0px 0px 5px #32B72F;
   }
   
-  .selecionado ion-icon {
+  .selecionado .contador {
     display: inherit;
-    color: #32B72F;
   }
   
-  ion-icon {
+  .contador {
     display: none;
     font-size: 18px;
+    position:absolute;
+    top: 178px;
+    left:115px;
+   
+  }
+  .contador :last-child {
+    font-size: 18px;
+    color: #32B72F;
+    margin-left: 6px;
+
+  }
+  .contador :first-child {
+    font-size: 18px;
+    color:red;
+    margin-right: 6px;
   }
   
   .escondido {

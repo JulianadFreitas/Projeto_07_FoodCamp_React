@@ -12,9 +12,7 @@ export default function Sobremesa() {
         <div class="tipo primeira">
         { sobremesas.map( itens => {
             return (
-                <div class="prato um" onclick="selecionarprato('prato', 'um')">
                    <CadaSobremesa src={itens.src} alt = {itens.alt} titulo ={itens.titulo} subtitulo={itens.subtitulo} preco={itens.preco} /> 
-                </div>
             );
         })}
   </div></> 
