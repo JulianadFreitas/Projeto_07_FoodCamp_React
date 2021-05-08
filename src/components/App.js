@@ -1,12 +1,12 @@
 
-import Pagina from "./Pagina";
-import Confirmacao from "./Confirmacao";
+import Topo from "./Topo";
+import Corpo from "./Corpo";
 
 export default function App() {
-    return (
-      <div>
-        <Pagina />
-        <Confirmacao />
-      </div>
-    )
-  }
+  return (
+   <div class="pagina">
+      <Topo />
+      <Corpo />
+   </div>
+  );
+}
