@@ -1,7 +1,5 @@
 function botaoverde() {
     tela.classList.remove('escondido');
-
-    prato = document.querySelector(".primeira .selecionado .titulo").innerHTML;
     drink = document.querySelector(".segunda .selecionado .titulo").innerHTML;
     doce = document.querySelector(".terceira .selecionado .titulo").innerHTML;
     precocomida = (document.querySelector(".primeira .selecionado .preco").innerHTML).replace(',', '.').replace('R$', '')
@@ -38,10 +36,10 @@ function wpp() {
         - Bebida: ${drink}\n
         - Sobremesa: ${doce}\n
           Total:  R$ ${precototal.toFixed(2).replace('.',',')}\n
-          
         - Endereço: ${endereco}\n
         - Nome: ${nome}`;
     const textoEncode = encodeURI(texto);
     const link = `https://wa.me/5581993089298?text=${textoEncode}`
-    window.location.href = `https://wa.me/5581993089298?text=${textoEncode}`;
+    window.location.href = `https://wa.me/5581993089298?text= + ${textoEncode}`;
 }
+
