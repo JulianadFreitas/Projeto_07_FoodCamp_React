@@ -216,13 +216,19 @@
   }
   
   .mascara {
-    background:rgba(255, 255, 255, 0.9);
+    background-color: #E5E5E5;;
+    background:rgba(229, 229, 229, 1);
     height: 100%;
     width: 100%;
     position: fixed;
     right: 0px;
     top: 0px;
     z-index: 2;
+    margin-top: 92px;
+  }
+  .mascara .nome-tipo {
+    margin-left: 20px;
+    margin-top: 30px;
   }
   
   .caixa-confirmacao {
@@ -247,43 +253,58 @@
   }
   
   .tudocerto,
-  .tudocerto a {
-    width: 329px;
-    height: 52px;
-    background: #fff;
-    color: #50D074;
-    text-decoration: none;
-    padding: 10px;
-    border: none;
-    border-radius: 50px;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.018em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto:wght@700', sans-serif;
-    font-weight: bold;
-  }
+.tudocerto a {
+  position: fixed;
+  top: 415px;
+  left: calc((100% - 329px)/2);
+  width: 329px;
+  height: 52px;
+  background: #50D074;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto:wght@700', sans-serif;
+  font-weight: bold;
+}
   
-  
-  .cancelar {
-    width: 329px;
-    height: 52px;
-    color: #fff;
-    border: none;
-    background-color: #50D074;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 22px;
-    line-height: 23px;
-    letter-spacing: 0.018em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto:wght@700', sans-serif;
-    font-weight: bold;
-  }
+.revisao {
+  width: 377px;
+  height: 201px;
+  position: fixed;
+  right: calc((100% - 377px)/2);
+  top: 181px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0px;
+}
+.cancelar {
+  position: fixed;
+  top: 467px;
+  left: calc((100% - 329px)/2);
+  width: 329px;
+  height: 52px;
+  color: #777;
+  border: none;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 22px;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto:wght@700', sans-serif;
+  font-weight: bold;
+}
   
   .descricao {
     display: flex;

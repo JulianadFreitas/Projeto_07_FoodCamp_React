@@ -1,5 +1,5 @@
 import React from "react";
-export default function BotaoFechamento(props) {
+export default function Fechamento(props) {
   const {
     pratosPedidos,
     bebidasPedidos,

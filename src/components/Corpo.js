@@ -1,7 +1,7 @@
 import Pratos from "./Pratos";
 import Bebidas from "./Bebidas";
 import Sobremesas from "./Sobremesas";
-import BotaoFechamento from "./BotaoFechamento.js";
+import Fechamento from "./Fechamento.js";
 import React from "react";
 
 export default function Corpo() {
@@ -34,7 +34,7 @@ export default function Corpo() {
         <Pratos todos={todos} setTodos={setTodos} pratosPedidos={pratosPedidos} setPratosPedidos={setPratosPedidos}/>
         <Bebidas todos={todos} setTodos={setTodos} bebidasPedidos={bebidasPedidos} setBebidasPedidos={setBebidasPedidos} />
         <Sobremesas todos={todos} setTodos={setTodos} sobremesasPedidos={sobremesasPedidos} setSobremesasPedidos={setSobremesasPedidos}/>
-        <BotaoFechamento todos={todos} setTodos={setTodos}
+        <Fechamento todos={todos} setTodos={setTodos}
          pratosPedidos={pratosPedidos} setPratosPedidos={setPratosPedidos}
          bebidasPedidos={bebidasPedidos} setBebidasPedidos={setBebidasPedidos}
          sobremesasPedidos={sobremesasPedidos} setSobremesasPedidos={setSobremesasPedidos}/>
