@@ -5,12 +5,12 @@ export default function Sobremesas(props) {
     const {todos, setTodos, sobremesasPedidos, setSobremesasPedidos} = props;
     return ( 
         <>
-        <div class="nome-tipo">Por fim, sua sobremesa</div>
-        <div class="tipo primeira">
+        <div className="nome-tipo">Por fim, sua sobremesa</div>
+        <div className="tipo primeira">
         { todos.sobremesas.map((infoSobremesa, i) =>  (
              <Sobremesa todos={todos} setTodos={setTodos}
                 sobremesasPedidos={sobremesasPedidos} setSobremesasPedidos={setSobremesasPedidos} 
-                key={infoSobremesa.id}
+                key={i}
                 infoSobremesa = {infoSobremesa}
                 indice={i} 
              /> 

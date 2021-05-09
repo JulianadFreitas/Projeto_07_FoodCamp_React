@@ -13,17 +13,15 @@ export default function Prato(props) {
         preco, 
         titulo, 
         subtitulo, 
-        contador, 
-        controle} = infoPrato;
+        contador} = infoPrato;
 
     const [classeDiv, setClasseDiv] = React.useState("opcao");
     const todosPratos = todos.pratos;
-    let pedidos = [];
+    let filtro = [];
     function SelecionarPrato() {
         if (classeDiv === "opcao") {
             setClasseDiv("opcao selecionado");
             infoPrato.contador = 1;
-            infoPrato.controle = true;
             const atualizado = {...todos};
             setTodos(atualizado);
             pratosPedidos.push(todosPratos[indice])
@@ -44,12 +42,10 @@ export default function Prato(props) {
         if (contador === 1) {
             setClasseDiv("opcao"); //AQUI
             infoPrato.contador = 0;
-            infoPrato.controle = true;
             const atualizado = {...todos};
             setTodos(atualizado);
-            pedidos = pratosPedidos.filter((item)=> item.titulo != titulo);
-            setPratosPedidos(pedidos);
-            console.log(pedidos);
+            filtro = pratosPedidos.filter((item)=> item.titulo !== titulo);
+            setPratosPedidos(filtro);
         }
     }
     return (
@@ -58,7 +54,7 @@ export default function Prato(props) {
         <div className={"titulo"}>{titulo} </div>
         <div className={"subtitulo"}>{subtitulo}</div>
         <div className={"preco"}>{preco}
-        <div class="contador">
+        <div className="contador">
           <div onClick = {Decrementa}> - </div>
           <div>{contador}</div> 
           <div onClick = {Incrementa}> +</div>

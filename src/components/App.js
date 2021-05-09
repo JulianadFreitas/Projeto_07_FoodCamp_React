@@ -4,7 +4,7 @@ import Corpo from "./Corpo";
 
 export default function App() {
   return (
-   <div class="pagina">
+   <div className="pagina">
     <Topo />
     <Corpo />
    </div>

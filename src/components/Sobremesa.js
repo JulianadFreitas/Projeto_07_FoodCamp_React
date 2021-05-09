@@ -2,8 +2,7 @@ import React from "react";
 export default function Sobremesa(props) {
    
     const {todos, setTodos, indice, infoSobremesa, sobremesasPedidos, setSobremesasPedidos} = props;
-    console.log(todos);
-    const {src, alt, preco, titulo, subtitulo, contador, controle} = infoSobremesa;
+    const {src, alt, preco, titulo, subtitulo, contador} = infoSobremesa;
     const [classeDiv, setClasseDiv] = React.useState("opcao");
     const todasSobremesas = todos.sobremesas;
     let pedidos = [];
@@ -11,7 +10,6 @@ export default function Sobremesa(props) {
       if (classeDiv === "opcao") {
         setClasseDiv("opcao selecionado"); 
         infoSobremesa.contador = 1;
-        infoSobremesa.controle = true;
         const atualizado = {...todos};
         setTodos(atualizado)
         sobremesasPedidos.push(todasSobremesas[indice])
@@ -32,8 +30,7 @@ export default function Sobremesa(props) {
             infoSobremesa.contador  = 0;
             const atualizado = {...todos};
             setTodos(atualizado);
-            infoSobremesa.controle = false;
-            pedidos = sobremesasPedidos.filter((item)=>item.titulo != titulo);
+            pedidos = sobremesasPedidos.filter((item)=>item.titulo !== titulo);
             setSobremesasPedidos(pedidos);
         }
     }
@@ -42,7 +39,7 @@ export default function Sobremesa(props) {
         <img src={src} alt={alt}/>
         <div className={"titulo"}>{titulo}</div>
         <div className={"subtitulo"}>{subtitulo}</div>
-        <div className={"preco"}>{preco}<div class="contador">
+        <div className={"preco"}>{preco}<div className="contador">
           <div onClick = {Decrementa}> - </div>
             <div>{contador}</div> 
             <div onClick = {Incrementa}> + </div>

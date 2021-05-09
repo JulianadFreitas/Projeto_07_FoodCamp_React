@@ -1,7 +1,6 @@
 import React from "react";
 export default function BotaoFechamento(props) {
   const {
-    todos,
     pratosPedidos,
     bebidasPedidos,
     sobremesasPedidos
@@ -12,34 +11,52 @@ export default function BotaoFechamento(props) {
   let contPrato = 0;
   let contBebida = 0;
   let contSobremesa = 0;
-  let controleP = "aha";
-  let controleB = "aha";
   let pratos = "";
   let bebidas = "";
   let sobremesas = "";
-  let total =0;
+  let precoPratos = 0;
+  let precoBebidas = 0;
+  let precoSobremesas = 0;
+  let total;
+  let precototal;
 
   pratosPedidos.map((item) => {
     if (item.contador === 0) {
-      return;
-    } else pratos += item.titulo + " (" + item.contador + "x) ";
+      return "";
+    } else {
+      contPrato += item.contador;
+      pratos += item.titulo + " (" + item.contador + "x) ";
+      precoPratos += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+    }
+    return "";
   });
+
   bebidasPedidos.map((item) => {
     if (item.contador === 0) {
-      return;
-    } else bebidas += item.titulo + " (" + item.contador + "x) ";
+      return "";
+    } else {
+      contBebida += item.contador;
+      bebidas += item.titulo + " (" + item.contador + "x) ";
+      precoBebidas += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+    }
+    return "";
   });
+
   sobremesasPedidos.map((item) => {
     if (item.contador === 0) {
-      return;
-    } else sobremesas += item.titulo + " (" + item.contador + "x) ";
+      return "";
+    } else {
+      contSobremesa += item.contador;
+      sobremesas += item.titulo + " (" + item.contador + "x) ";
+      precoSobremesas += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+    }
+    return "";
   });
 
-  todos.pratos.forEach((item) => (contPrato += item.contador));
-  todos.bebidas.forEach((item) => (contBebida += item.contador, controleB = item.controle));
-  todos.sobremesas.forEach((item) => (contSobremesa += item.contador));
+  //(*1)Solução pouco semântica para realizar a soma, optei por fazer assim pois o ParseInt acabava por arredondar os valores o que acabava por não retornar o valor exato;
 
-  console.log(pratosPedidos, bebidasPedidos, controleP);
+  precototal = (precoPratos * 1) + (precoBebidas * 1) + (precoSobremesas * 1);
+  total = precototal.toFixed(2).replace('.', ',');
 
   if ((contPrato !== 0) && (contBebida !== 0) && (contSobremesa !== 0)) {
     classeDiv = "verde";
@@ -54,17 +71,19 @@ export default function BotaoFechamento(props) {
         - Prato: ${pratos}\n
         - Bebida: ${bebidas}\n
         - Sobremesa: ${sobremesas}\n
-          Total:  R$ \n`;
+          Total:  R$ ${total} \n`;
     const textoEncode = encodeURI(texto);
-    const link = `https://wa.me/5581993089298?text=${textoEncode}`
     window.location.href = `https://wa.me/5581993089298?text= + ${textoEncode}`;
   }
-  return ( <>
-       <div class={classe}>
-          <a>Selecione os 3 itens <br /> para fechar o pedido</a> </div>
-           <div class={classeDiv} onClick ={Wpp}> 
-          <a>Fechar pedido</a>
-       </div>
-    </>
+
+  return ( 
+     <>
+     <div className={classe}>
+        <a>Selecione os 3 itens <br /> para fechar o pedido</a> 
+      </div>
+     <div className={classeDiv} onClick ={Wpp}> 
+        <a>Fechar pedido</a>
+     </div>
+     </>
   )
 }
