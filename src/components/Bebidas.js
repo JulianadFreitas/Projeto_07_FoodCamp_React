@@ -1,20 +1,25 @@
-import Bebida from "./Bebida"
+import Opcao from "./Opcao"
 import React from "react";
 
 export default function Bebidas(props) {
     
-    const {todos, setTodos, bebidasPedidos, setBebidasPedidos } = props;
+    const {
+        todos, 
+        setTodos, 
+        bebidasPedidos, 
+        setBebidasPedidos
+        } = props;
     
     return ( <>
         <div className="nome-tipo">Agora, sua bebida</div>
         <div className="tipo primeira">
-        {todos.bebidas.map((infoBebida, i) =>  (
-            <Bebida todos={todos} setTodos={setTodos}
-                bebidasPedidos={bebidasPedidos} setBebidasPedidos={setBebidasPedidos} 
+        { todos.bebidas.map((infoOpcao, i) =>  (
+             <Opcao todos={todos} setTodos={setTodos} 
                 key={i}
-                infoBebida = {infoBebida}
+                bebidasPedidos={bebidasPedidos} setBebidasPedidos={setBebidasPedidos}
+                infoOpcao = {infoOpcao}
                 indice={i} 
             /> 
-        ))}
-        </div></> 
+            ))}
+  </div></> 
    )}
