@@ -4,7 +4,7 @@
 Site mobile do FoodCamp 🍔🥤
 </h1>
 
-<p align="center">Refatoração do projeto foodcamp, agora utilizando React. O FoodCamo é um restaurante especial que entrega seu pedido em 6 minutos. O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.
+<p align="center">Refatoração do projeto foodcamp, agora utilizando React. O FoodCamp é um restaurante especial que entrega seu pedido em 6 minutos. O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.
  </p>
 
 <p align="center">
@@ -27,15 +27,6 @@ Site mobile do FoodCamp 🍔🥤
   <img src="public/imagens/20210411_201524.jpg" alt="demo" height="320">
 </div>
 <hr />
-
-
-
-
-
-
-
-
-
 
 
 # Getting Started with Create React App
