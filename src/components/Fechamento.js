@@ -1,10 +1,6 @@
 import React from "react";
 export default function Fechamento(props) {
-  const {
-    pratosPedidos,
-    bebidasPedidos,
-    sobremesasPedidos
-  } = props;
+  const { pratosPedidos, bebidasPedidos, sobremesasPedidos } = props;
 
   let classeDiv = "verde escondido";
   let classe = "fechamento";
@@ -26,7 +22,9 @@ export default function Fechamento(props) {
     } else {
       contPrato += item.contador;
       pratos += item.titulo + " (" + item.contador + "x) ";
-      precoPratos += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+      precoPratos += parseFloat(
+        item.preco.replace(",", ".").replace("R$", "") * item.contador
+      );
     }
     return "";
   });
@@ -37,7 +35,9 @@ export default function Fechamento(props) {
     } else {
       contBebida += item.contador;
       bebidas += item.titulo + " (" + item.contador + "x) ";
-      precoBebidas += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+      precoBebidas += parseFloat(
+        item.preco.replace(",", ".").replace("R$", "") * item.contador
+      );
     }
     return "";
   });
@@ -48,17 +48,19 @@ export default function Fechamento(props) {
     } else {
       contSobremesa += item.contador;
       sobremesas += item.titulo + " (" + item.contador + "x) ";
-      precoSobremesas += parseFloat((item.preco).replace(',', '.').replace('R$', '') * item.contador);
+      precoSobremesas += parseFloat(
+        item.preco.replace(",", ".").replace("R$", "") * item.contador
+      );
     }
     return "";
   });
 
-  precototal = (precoPratos * 1) + (precoBebidas * 1) + (precoSobremesas * 1);
-  total = precototal.toFixed(2).replace('.', ',');
+  precototal = precoPratos * 1 + precoBebidas * 1 + precoSobremesas * 1;
+  total = precototal.toFixed(2).replace(".", ",");
 
-  if ((contPrato !== 0) && (contBebida !== 0) && (contSobremesa !== 0)) {
+  if (contPrato !== 0 && contBebida !== 0 && contSobremesa !== 0) {
     classeDiv = "verde";
-    classe = "fechamento escondido"
+    classe = "fechamento escondido";
   } else {
     classeDiv = "verde escondido";
     classe = "fechamento";
@@ -74,14 +76,16 @@ export default function Fechamento(props) {
     window.location.href = `https://wa.me/5581993089298?text= + ${textoEncode}`;
   }
 
-  return ( 
-     <>
-     <div className={classe}>
-        <button>Selecione os 3 itens <br /> para fechar o pedido</button> 
+  return (
+    <>
+      <div className={classe}>
+        <button>
+          Selecione os 3 itens <br /> para fechar o pedido
+        </button>
       </div>
-     <div className={classeDiv} onClick ={Wpp}> 
+      <div className={classeDiv} onClick={Wpp}>
         <button>Fechar pedido</button>
-     </div>
-     </>
-  )
+      </div>
+    </>
+  );
 }
