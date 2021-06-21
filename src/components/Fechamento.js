@@ -53,8 +53,6 @@ export default function Fechamento(props) {
     return "";
   });
 
-  //(*1)Solução pouco semântica para realizar a soma, optei por fazer assim pois o ParseInt acabava por arredondar os valores o que acabava por não retornar o valor exato;
-
   precototal = (precoPratos * 1) + (precoBebidas * 1) + (precoSobremesas * 1);
   total = precototal.toFixed(2).replace('.', ',');
 
