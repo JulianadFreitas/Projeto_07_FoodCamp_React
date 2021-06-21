@@ -4,14 +4,17 @@
 Site mobile do FoodCamp 🍔🥤
 </h1>
 
-<p align="center">Refatoração do projeto foodcamp, agora utilizando. O FoodCamo é um restaurante especial que entrega seu pedido em 6 minutos. O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.</p>
+<p align="center">Refatoração do projeto foodcamp, agora utilizando React. O FoodCamo é um restaurante especial que entrega seu pedido em 6 minutos. O site permite de forma fácil a escolha do seu combo, enviando em seguida o pedido por WhatsApp diretamente para o restaurante.
+ </p>
 
 <p align="center">
   Esse é o meu terceiro projeto com React no treinamento do bootcamp "Desenvolvimento Web Full-Stack" do Responde Aí
 </p>
 
 <p align="center">
-  Acesse o site <a href="https://julianadfreitas.github.io/Projeto_03_FoodCamp/"> aqui </a>
+  Acesse a primeira versão <a href="https://julianadfreitas.github.io/Projeto_03_FoodCamp/"> aqui </a>
+  </br> Acesse a nova versão com React <a href="https://foodcamp-react-rho.vercel.app/"> aqui </a>
+
 </p>
 
 <div align="center">
@@ -24,16 +27,8 @@ Site mobile do FoodCamp 🍔🥤
   <img src="public/imagens/20210411_201524.jpg" alt="demo" height="320">
 </div>
 <hr />
-[//]: # (Add the features of your project here:)
-### Página desenvolvida utilizando CSS, HTML e JavaScript.
 
-### Funcionalidades:
-- Lista dos pedidos com scroll horizontal;
-- Janela de confirmação do pedido que soma o total da compra e encaminhamento do mesmo para o whatsapp com mensagem pronta;
 
-### Conhecimentos:
-- Para a organização do layout: Flex-Box, ícones da biblioteca Ionicons;
-- JavaScript: prompt, .querySelector, Position Fixed;
 
 
 
