@@ -77,10 +77,10 @@ export default function Fechamento(props) {
   return ( 
      <>
      <div className={classe}>
-        <a>Selecione os 3 itens <br /> para fechar o pedido</a> 
+        <button>Selecione os 3 itens <br /> para fechar o pedido</button> 
       </div>
      <div className={classeDiv} onClick ={Wpp}> 
-        <a>Fechar pedido</a>
+        <button>Fechar pedido</button>
      </div>
      </>
   )

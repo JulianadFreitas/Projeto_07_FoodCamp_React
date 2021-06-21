@@ -120,11 +120,12 @@
     border-radius: 4px;
   }
   
-  a {
+  button {
     width: 364px;
     height: 61px;
     background: #CBCBCB;
     color: #fff;
+    border: none;
     text-decoration: none;
     padding: 10px;
     border-radius: 50px;
@@ -133,6 +134,9 @@
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.018em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .botao-final {
@@ -186,13 +190,14 @@
     display: block;
   }
   
-  .verde a {
+  .verde button {
     width: 364px;
     height: 61px;
     background: green;
     color: #fff;
     text-decoration: none;
     padding: 10px;
+    border: none ;
     border-radius: 50px;
     font-family: 'Roboto:wght@400', sans-serif;
     font-size: 20px;
